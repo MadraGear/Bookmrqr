@@ -1,0 +1,33 @@
+﻿@page
+@model IndexModel
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Home page";
+}
+<h2>Bookmarks</h2>
+<label>Total bookmarks: @Model.TotalBookmarks</label>
+<label>Processed: @Model.ProcessedBookmarks</label>
+<label>Un processed: @Model.UnProcessedBookmarks</label>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Timestamp</th>
+            <th>Url</th>
+            <th>IsProcessed</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Bookmark bookmark in Model.Bookmarks)
+        {
+            <tr>
+                <td>@bookmark.Id</td>
+                <td>@bookmark.Title</td>
+                <td>@bookmark.Timestamp.ToString("yyyy-MM-dd HH:MM:ss")</td>
+                <td>@bookmark.Url</td>
+                <td>@bookmark.IsProcessed</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>@ViewData["Title"] - Bookmrqr Viewer</title>
+	<meta http-equiv="refresh" content="4" >
+	<style>
+		table {
+			font-family: arial, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		td, th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		}
+
+		tr:nth-child(even) {
+			background-color: #dddddd;
+		}
+</style>
+</head>
+<body>
+	<div>
+		@RenderBody()
+		<hr />
+		<footer>
+			<p>&copy; Summercamp 2018</p>
+		</footer>
+	</div>
+</body>
+</html>

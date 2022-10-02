@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>Bookmrqr.Service</RootNamespace>
+    <AssemblyName>Bookmrqr.Service</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup>               
+    <PublishWithAspNetCoreTargetManifest>false</PublishWithAspNetCoreTargetManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bookmrqr.Domain\Bookmrqr.Domain.csproj" />
+    <ProjectReference Include="..\Bookmrqr.Events\Bookmrqr.Events.csproj" />
+    <ProjectReference Include="..\Quintor.CQRS\Quintor.CQRS.csproj" />
+  </ItemGroup>
+
+</Project>
